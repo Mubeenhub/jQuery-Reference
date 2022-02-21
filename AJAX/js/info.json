@@ -1,0 +1,17 @@
+[
+    {
+        "firstName":"Mubeen",
+        "lastName":"Ali",
+        "Grade":"A*"
+    },
+    {
+        "firstName":"Ahmed",
+        "lastName":"Khan",
+        "Grade":"A"
+    },
+    {
+        "firstName":"Sam",
+        "lastName":"Moody",
+        "Grade":"C"
+    }
+]

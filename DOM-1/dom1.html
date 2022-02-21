@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<title>DOM-1</title>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+            $(document).ready(function (){
+                $('#heading-one').css({
+                    'background':'red',
+                    'font-size':'50px',
+                });
+
+                $('.para1').addClass('newclass');
+
+                $('.btn').click(function(){
+                    // $('.para2').addClass('newclass');
+                    // $('.para1').removeClass('newclass');
+                    
+                    $('.para2').toggleClass('newclass');
+
+                });
+
+                //******************************** Change or Add Text*****************************
+                // $('#newDiv').text('Hell0 World!!!')
+                $('#newDiv').html('<h2>Hello World!!!</h2>')
+
+                $('ul').append('<li>New List Item Appended</li>')
+                $('ul').prepend('<li>New List Item Before</li>')
+
+                // $('form').empty(); /* Only Hides Item */
+                $('form').detach(); /* Remove form purely */
+
+
+
+
+
+
+
+
+
+
+
+
+            })
+        </script>
+
+        <style>
+            .newclass{
+                background-color: aqua;
+                padding: 15px;
+                color: red;
+                text-align: center;
+            }
+        </style>
+	</head>
+	<body>
+
+        <button class="btn">Para 2 Change</button>
+		<h1 id="heading-one">Heading One</h1>
+		<p class="para1">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolorum
+			officiis cum? Adipisci officiis consequatur assumenda ab distinctio, hic
+			dolorum enim magni commodi architecto eaque reiciendis doloribus optio
+			voluptates. Neque ipsam atque corrupti consectetur repellat praesentium
+			ducimus. Voluptate, tempora explicabo, ea a quae suscipit pariatur,
+			repellat amet est cum eos.
+		</p>
+
+		<h1 id="heading-two">Heading Two</h1>
+		<p class="para2">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolorum
+			officiis cum? Adipisci officiis consequatur assumenda ab distinctio, hic
+			dolorum enim magni commodi architecto eaque reiciendis doloribus optio
+			voluptates. Neque ipsam atque corrupti consectetur repellat praesentium
+			ducimus. Voluptate, tempora explicabo, ea a quae suscipit pariatur,
+			repellat amet est cum eos.
+		</p>
+
+        <div id="newDiv"></div>
+
+		<ul class="list">
+			<li>List 1</li>
+			<li>List 2</li>
+			<li>List 3</li>
+			<li>List 4</li>
+			<li>List 5</li>
+		</ul>
+
+		<form action="">
+			<input type="text" id="name" placeholder="Name . . ." /><br />
+			<input type="text" id="email" placeholder="E-mail . . ." /><br />
+			<select id="gender">
+				<option value="male">Male</option>
+				<option value="female">Female</option>
+			</select><br>
+		</form>
+	</body>
+</html>

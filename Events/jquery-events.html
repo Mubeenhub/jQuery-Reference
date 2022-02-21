@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>jQuery Events</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+			$("#btn2").ready(function () {
+				$("#btn2").click(function () {
+					$(".para1").show();
+				});
+			});
+
+			// $("#btn1").ready(function () {
+			// 	$("#btn1").click(function () {
+			// 		$(".para1").hide();
+			// 	});
+			// });
+
+			$("#btn1").ready(function () {
+				// $('#btn1').on('mouseenter',function(){
+				//     $('.para1').toggle();
+				// })
+
+				// $('#btn1').on('mouseleave',function(){
+				//     $('.para1').toggle();
+				// })
+
+				$("#btn1").click(function (e) {
+					console.log(e);
+					console.log(e.currentTarget.id);
+					console.log(e.currentTarget.innerHTML);
+					console.log(e.currentTarget.outerHTML);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<header>
+			<h1>jQuery Events</h1>
+		</header>
+
+		<div class="container">
+			<button id="btn1">Button 1</button>
+			<button id="btn2">Button 2</button>
+			<button id="btn3">Button 3</button>
+
+			<p class="para1">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quia
+				deserunt corporis nam laboriosam obcaecati sed, corrupti fugit vero modi
+				aliquam natus debitis in quod ea optio fuga delectus laborum ratione
+				quaerat blanditiis magnam esse ducimus officia? Expedita harum
+				praesentium inventore accusamus autem consectetur, hic nesciunt
+				quibusdam ab, voluptatum possimus. Aperiam voluptatum suscipit ut
+				temporibus consequuntur quae dolorum praesentium adipisci quia nesciunt
+				repudiandae repellat ad autem amet nemo, officia velit omnis alias ab
+				impedit! Alias fugiat quibusdam, quo eligendi maxime perspiciatis quod
+				libero ratione aut repudiandae, voluptate facilis modi quos id, aperiam
+				debitis magnam nam repellat ducimus recusandae possimus dolorem. Nemo
+				debitis veniam velit nihil maxime distinctio obcaecati illo temporibus?
+				Velit obcaecati perferendis ipsa minus! Autem saepe veritatis minus
+				aliquid, hic facere corrupti ea temporibus, blanditiis tempore
+				inventore. Unde assumenda asperiores modi itaque pariatur ut vero.
+				Suscipit, nesciunt! Modi placeat offciis voluptates et laudantium
+				dolorum praesentium quasi ut corporis fugit?
+			</p>
+
+			<h1 id="cords"></h1>
+			<hr />
+		</div>
+
+		<form class="form">
+			<label>Name</label>
+			<input type="text" id="name" />
+
+			<br />
+
+			<label for="">Email</label>
+			<input type="text" id="email" />
+
+			<br />
+
+			<label for="">Select Gender</label>
+			<select name="" id="gender">
+				<option value="Male">Male</option>
+				<option value="Female">Female</option>
+			</select>
+
+			<br />
+
+			<input type="submit" value="Submit" />
+		</form>
+
+		<script src="js/script.js"></script>
+	</body>
+</html>
